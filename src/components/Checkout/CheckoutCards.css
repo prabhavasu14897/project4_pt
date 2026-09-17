@@ -1,0 +1,252 @@
+.checkout-card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  padding-left: calc(var(--space-lg) + 4px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  overflow: hidden;
+}
+
+.checkout-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+
+.checkout-card--step1::before {
+  background: var(--color-secondary);
+}
+
+.checkout-card--step2::before {
+  background: var(--color-primary-strong);
+}
+
+.checkout-card--step3::before {
+  background: var(--color-tertiary);
+}
+
+.checkout-card__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.checkout-card__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-surface-muted);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: var(--body-sm-size);
+  flex-shrink: 0;
+}
+
+.checkout-card__head h2 {
+  font-family: var(--font-display);
+  font-size: var(--title-lg-size);
+  font-weight: 700;
+}
+
+.checkout-card__head .badge {
+  margin-left: auto;
+}
+
+.checkout-card__link {
+  background: none;
+  border: none;
+  color: var(--color-secondary);
+  font-weight: 700;
+  font-size: var(--body-sm-size);
+}
+
+/* Buyer contact */
+.buyer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.buyer-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.buyer-field__label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-secondary);
+}
+
+.buyer-field__label svg {
+  width: 13px;
+  height: 13px;
+  color: var(--color-primary-accent);
+}
+
+.buyer-field__value {
+  font-size: var(--body-md-size);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.buyer-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px dashed var(--color-border);
+  font-size: var(--body-sm-size);
+  color: var(--color-text-secondary);
+}
+
+.buyer-note > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.buyer-note svg {
+  width: 15px;
+  height: 15px;
+  color: var(--color-tertiary);
+  flex-shrink: 0;
+}
+
+/* Address form */
+.address-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.address-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.address-field > span:first-child {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-secondary);
+}
+
+.address-field input {
+  height: 44px;
+  padding-inline: var(--space-md);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: var(--color-canvas);
+  color: var(--color-text-primary);
+  font-size: var(--body-sm-size);
+}
+
+.address-field input:focus {
+  outline: none;
+  border-color: var(--color-primary-accent);
+}
+
+.address-field__with-status {
+  position: relative;
+}
+
+.address-field__status {
+  position: absolute;
+  right: var(--space-sm);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-tertiary);
+  pointer-events: none;
+}
+
+.address-field__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-tertiary);
+}
+
+.address-field__icon-input {
+  position: relative;
+}
+
+.address-field__icon-input svg {
+  position: absolute;
+  left: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--color-text-secondary);
+}
+
+.address-field__icon-input input {
+  width: 100%;
+  padding-left: 40px;
+}
+
+.address-route {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-muted);
+}
+
+.address-route svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary-accent);
+  flex-shrink: 0;
+}
+
+.address-route strong {
+  display: block;
+  font-size: var(--body-sm-size);
+  color: var(--color-text-primary);
+}
+
+.address-route span {
+  display: block;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.address-route__badge {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .buyer-grid,
+  .address-grid {
+    grid-template-columns: 1fr;
+  }
+}

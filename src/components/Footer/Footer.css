@@ -1,0 +1,206 @@
+.site-footer {
+  background: var(--color-primary-deep);
+  color: #ebddff;
+  margin-top: var(--space-xl);
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: var(--space-xl);
+  padding-block: var(--space-xl);
+}
+
+.site-footer__brand-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.site-footer__mark {
+  display: block;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.site-footer__mark img {
+  width: 165%;
+  height: 165%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 50% 38%;
+  transform: translate(-19%, -19%);
+}
+
+.site-footer__brand-head span {
+  font-family: var(--font-display);
+  font-size: var(--title-lg-size);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.site-footer__brand p {
+  font-size: var(--body-sm-size);
+  color: rgba(235, 221, 255, 0.75);
+  margin-bottom: var(--space-md);
+  max-width: 40ch;
+}
+
+.site-footer__contact {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--body-sm-size);
+  color: rgba(235, 221, 255, 0.9);
+  max-width: none;
+}
+
+.site-footer__contact svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  color: #d3bbff;
+}
+
+.site-footer__col h3,
+.site-footer__compliance h3 {
+  font-size: var(--label-md-size);
+  font-weight: 700;
+  letter-spacing: var(--label-md-tracking);
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: var(--space-md);
+}
+
+.site-footer__col ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.site-footer__col a {
+  font-size: var(--body-sm-size);
+  color: rgba(235, 221, 255, 0.75);
+}
+
+.site-footer__col a:hover {
+  color: #ffffff;
+}
+
+.site-footer__compliance-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.site-footer__compliance-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-weight: 700;
+  color: #6ffbbe;
+  font-size: var(--body-sm-size);
+  margin-bottom: var(--space-sm);
+}
+
+.site-footer__compliance-title svg {
+  width: 16px;
+  height: 16px;
+}
+
+.site-footer__compliance-box p:last-child {
+  font-size: 12px;
+  color: rgba(235, 221, 255, 0.75);
+  margin: 0;
+}
+
+.site-footer__gateways-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(235, 221, 255, 0.6);
+  margin-bottom: var(--space-sm);
+}
+
+.site-footer__payments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.site-footer__payments span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px var(--space-sm);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 11px;
+  color: #ebddff;
+}
+
+.site-footer__payments svg {
+  width: 13px;
+  height: 13px;
+}
+
+.site-footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.site-footer__bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  height: 56px;
+  font-size: 12px;
+  color: rgba(235, 221, 255, 0.6);
+}
+
+.site-footer__bottom-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.site-footer__bottom-links a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 1023px) {
+  .site-footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-footer__brand {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer__brand {
+    grid-column: auto;
+  }
+
+  .site-footer__bottom-row {
+    flex-direction: column;
+    height: auto;
+    padding-block: var(--space-md);
+    padding-bottom: calc(var(--space-md) + 64px);
+    gap: var(--space-sm);
+    text-align: center;
+  }
+}

@@ -1,0 +1,75 @@
+/* Radiant Nightfall — dark theme tokens (.impeccable/context/dark-theme.md) */
+:root[data-theme='dark'] {
+  /* Core palette — brand hues stay the same family as light; roles adapted for a near-black canvas */
+  --color-primary-strong: #5b21b6;
+  --color-primary-deep: #5b21b6;
+  --color-primary-accent: #d3bbff;
+  --color-primary-hover: #7c3aed;
+  --color-primary-container: rgba(91, 33, 182, 0.22);
+  --color-primary-container-text: #d3bbff;
+  --color-on-primary: #fffbeb;
+
+  --color-secondary: #d97706;
+  --color-secondary-hover: #f59e0b;
+  --color-secondary-container: rgba(217, 119, 6, 0.16);
+  --color-on-secondary: #0f0b1e;
+
+  --color-tertiary: #10b981;
+  --color-tertiary-container: rgba(16, 185, 129, 0.14);
+  --color-tertiary-on-container: #6ffbbe;
+  --color-on-tertiary: #002113;
+
+  --color-urgency: #ef4444;
+  --color-urgency-container: rgba(239, 68, 68, 0.16);
+  --color-on-urgency: #fffbeb;
+
+  /* Neutrals & surfaces */
+  --color-canvas: #0f0b1e;
+  --color-surface: #18122b;
+  --color-surface-muted: #231b3d;
+  --color-text-primary: #fffbeb;
+  --color-text-secondary: #a79fc4;
+  --color-border: rgba(217, 119, 6, 0.18);
+  --color-border-tint-violet: rgba(217, 119, 6, 0.4);
+
+  /* Typography — inherits the light theme's Plus Jakarta Sans / Inter family AND full
+     type scale (sizes, weights, line-heights) by request, instead of Radiant Nightfall's
+     own Syne/Manrope + larger scale. Nothing overridden here on purpose. */
+
+  /* Shape — pill geometry throughout */
+  --radius-sm: 0.5rem;
+  --radius: 1rem;
+  --radius-md: 1.5rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+  --btn-radius: var(--radius-full);
+
+  /* Spacing */
+  --gutter: 1.5rem;
+  --gutter-mobile: 1rem;
+  --margin: 3rem;
+  --margin-mobile: 1.25rem;
+
+  /* Elevation — chromatic ember glow instead of grey shadows */
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-2: 0 12px 32px -4px rgba(217, 119, 6, 0.25), 0 0 0 1px rgba(217, 119, 6, 0.45);
+  --shadow-3: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-4: 0 24px 48px -8px rgba(15, 11, 30, 0.9), 0 0 24px rgba(217, 119, 6, 0.3);
+
+  /* Button treatments — gradients per Radiant Nightfall component spec */
+  --btn-primary-bg: linear-gradient(135deg, #6d28d9, #8b5cf6);
+  --btn-primary-bg-hover: linear-gradient(135deg, #7c3aed, #a78bfa);
+  --btn-secondary-bg: linear-gradient(135deg, #d97706, #f59e0b);
+  --btn-secondary-bg-hover: linear-gradient(135deg, #f59e0b, #fbbf24);
+  --btn-outline-bg: rgba(91, 33, 182, 0.3);
+  --btn-outline-bg-hover: rgba(91, 33, 182, 0.45);
+  --btn-outline-border: rgba(217, 119, 6, 0.4);
+  --btn-outline-color: #fffbeb;
+
+  /* Glass surfaces for sticky chrome */
+  --glass-bg: rgba(24, 18, 43, 0.82);
+  --glass-blur: 16px;
+
+  color-scheme: dark;
+}

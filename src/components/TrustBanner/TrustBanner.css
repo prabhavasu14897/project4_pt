@@ -1,0 +1,50 @@
+.trust-banner {
+  padding-block: var(--space-lg);
+}
+
+.trust-banner__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.trust-banner__text {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.trust-banner__icon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-primary-accent);
+  flex-shrink: 0;
+}
+
+.trust-banner__text h2 {
+  font-family: var(--font-display);
+  font-size: var(--title-lg-size);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.trust-banner__text p {
+  font-size: var(--body-sm-size);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 767px) {
+  .trust-banner__row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .trust-banner__row .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,44 @@
+.qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.qty-stepper__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: var(--color-primary-accent);
+}
+
+.qty-stepper__btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.qty-stepper__btn:hover {
+  background: var(--color-primary-container);
+}
+
+.qty-stepper__value {
+  min-width: 28px;
+  text-align: center;
+  font-weight: 600;
+  font-size: var(--body-md-size);
+}
+
+[data-theme='dark'] .qty-stepper {
+  border-radius: var(--radius-full);
+}
+
+[data-theme='dark'] .qty-stepper__btn {
+  border-radius: var(--radius-full);
+}

@@ -1,0 +1,121 @@
+.fulfillment-timeline {
+  padding-block: var(--space-xl) var(--space-lg);
+}
+
+.fulfillment-timeline__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.fulfillment-timeline__kicker {
+  font-size: var(--label-md-size);
+  font-weight: 700;
+  letter-spacing: var(--label-md-tracking);
+  text-transform: uppercase;
+  color: var(--color-primary-accent);
+  margin-bottom: 4px;
+}
+
+.fulfillment-timeline__head h2 {
+  font-family: var(--font-display);
+  font-size: var(--headline-sm-size);
+  font-weight: 700;
+}
+
+.fulfillment-timeline__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.fulfillment-timeline__steps li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.fulfillment-timeline__steps li.is-active {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 1px var(--color-secondary);
+}
+
+.fulfillment-timeline__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-surface-muted);
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+
+.fulfillment-timeline__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.is-completed .fulfillment-timeline__icon {
+  background: var(--color-tertiary);
+  color: var(--color-on-tertiary);
+}
+
+.is-active .fulfillment-timeline__icon {
+  background: var(--color-secondary);
+  color: var(--color-on-secondary);
+}
+
+.fulfillment-timeline__status {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+}
+
+.is-completed .fulfillment-timeline__status {
+  color: var(--color-tertiary);
+}
+
+.is-active .fulfillment-timeline__status {
+  color: var(--color-secondary);
+}
+
+.fulfillment-timeline__steps strong {
+  font-family: var(--font-display);
+  font-size: var(--body-md-size);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.fulfillment-timeline__meta {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.fulfillment-timeline__note {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 1023px) {
+  .fulfillment-timeline__steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .fulfillment-timeline__steps {
+    grid-template-columns: 1fr;
+  }
+}

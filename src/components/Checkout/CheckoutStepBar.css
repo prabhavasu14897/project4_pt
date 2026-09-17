@@ -1,0 +1,114 @@
+.checkout-stepbar {
+  padding-block: var(--space-lg) var(--space-md);
+}
+
+.checkout-stepbar__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.checkout-stepbar__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.checkout-stepbar__title > svg {
+  width: 30px;
+  height: 30px;
+  color: var(--color-primary-accent);
+  flex-shrink: 0;
+}
+
+.checkout-stepbar__title h1 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-display);
+  font-size: var(--headline-sm-size);
+  font-weight: 700;
+}
+
+.checkout-stepbar__title p {
+  font-size: var(--body-sm-size);
+  color: var(--color-text-secondary);
+}
+
+.checkout-stepbar__steps {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.checkout-stepbar__steps li {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-muted);
+  color: var(--color-text-secondary);
+  font-size: var(--body-sm-size);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.checkout-stepbar__steps li.is-active {
+  background: var(--color-secondary);
+  color: var(--color-on-secondary);
+}
+
+.checkout-rush {
+  background: var(--color-tertiary-container);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.checkout-rush__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  padding-block: var(--space-sm);
+  font-size: var(--body-sm-size);
+  color: var(--color-tertiary-on-container);
+}
+
+.checkout-rush__row > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.checkout-rush__row strong {
+  white-space: nowrap;
+}
+
+.checkout-rush__row svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.checkout-rush__tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .checkout-stepbar__steps {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .checkout-stepbar__steps li {
+    flex: 1;
+    text-align: center;
+    padding-inline: var(--space-sm);
+  }
+}

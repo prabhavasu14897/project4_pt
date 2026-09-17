@@ -1,0 +1,228 @@
+.hero {
+  position: relative;
+  padding-block: var(--space-xl) 64px;
+  background:
+    linear-gradient(180deg, rgba(255, 248, 245, 0.55) 0%, rgba(255, 248, 245, 0.92) 70%, var(--color-canvas) 100%),
+    url('/images/background.png');
+  background-size: cover;
+  background-position: center top;
+  overflow: hidden;
+}
+
+[data-theme='dark'] .hero {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(91, 33, 182, 0.35), transparent 70%),
+    linear-gradient(180deg, rgba(15, 11, 30, 0.35) 0%, rgba(15, 11, 30, 0.75) 65%, var(--color-canvas) 100%),
+    url('/images/background.png');
+  background-size: cover;
+  background-position: center top;
+}
+
+.hero__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr);
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.hero__flags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.hero__flag-text {
+  font-size: var(--body-sm-size);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.hero__dispatch-badge {
+  margin-bottom: var(--space-md);
+}
+
+.hero__headline {
+  font-family: var(--font-display);
+  font-size: var(--display-lg-size);
+  font-weight: var(--display-lg-weight);
+  line-height: var(--display-lg-line);
+  letter-spacing: var(--display-lg-tracking);
+  color: var(--color-text-primary);
+  max-width: 16ch;
+  margin-bottom: var(--space-md);
+}
+
+.hero__accent {
+  color: var(--color-primary-accent);
+}
+
+.hero__subhead {
+  font-size: var(--body-lg-size);
+  line-height: var(--body-lg-line);
+  color: var(--color-text-secondary);
+  max-width: 62ch;
+  margin-bottom: var(--space-lg);
+}
+
+.hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xl);
+}
+
+.hero__stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm) var(--space-md);
+  box-shadow: var(--shadow-1);
+}
+
+.hero__stat-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+.hero__stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--title-md-size);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.hero__stat span span {
+  display: block;
+  font-size: var(--body-sm-size);
+  color: var(--color-text-secondary);
+}
+
+/* Deal card */
+.hero__deal {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-3);
+}
+
+.hero__deal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.hero__deal-kicker {
+  font-size: var(--label-sm-size);
+  font-weight: 800;
+  letter-spacing: var(--label-sm-tracking);
+  text-transform: uppercase;
+  color: var(--color-urgency);
+}
+
+.hero__deal-media {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--color-canvas);
+  margin-bottom: var(--space-md);
+}
+
+.hero__deal-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__deal-count {
+  position: absolute;
+  left: var(--space-sm);
+  bottom: var(--space-sm);
+  background: rgba(28, 25, 23, 0.72);
+  color: #ffffff;
+}
+
+.hero__deal-title {
+  font-family: var(--font-display);
+  font-size: var(--title-lg-size);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.hero__deal-desc {
+  font-size: var(--body-sm-size);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.hero__deal-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.hero__deal-price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+
+.hero__deal-price-now {
+  font-family: var(--font-display);
+  font-size: var(--headline-md-size);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.hero__deal-price-was {
+  font-size: var(--body-md-size);
+  color: var(--color-text-secondary);
+  text-decoration: line-through;
+}
+
+@media (max-width: 1023px) {
+  .hero__row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__headline {
+    max-width: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding-block: var(--space-lg) var(--space-xl);
+  }
+
+  .hero__headline {
+    font-size: var(--display-lg-mobile-size);
+    line-height: var(--display-lg-mobile-line);
+  }
+
+  .hero__stats {
+    gap: var(--space-sm);
+  }
+
+  .hero__stat {
+    flex: 1 1 45%;
+  }
+}

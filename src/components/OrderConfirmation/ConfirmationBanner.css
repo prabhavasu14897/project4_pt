@@ -1,0 +1,126 @@
+.confirmation-banner {
+  padding-block: var(--space-lg);
+  background: var(--color-tertiary-container);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.confirmation-banner__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.confirmation-banner__main {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.confirmation-banner__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-tertiary);
+  flex-shrink: 0;
+}
+
+.confirmation-banner__check svg {
+  width: 26px;
+  height: 26px;
+  color: var(--color-on-tertiary);
+}
+
+.confirmation-banner__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-tertiary-on-container);
+  margin-bottom: 4px;
+}
+
+.confirmation-banner__tag svg {
+  width: 13px;
+  height: 13px;
+}
+
+.confirmation-banner__main h1 {
+  font-family: var(--font-display);
+  font-size: var(--headline-md-size);
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.confirmation-banner__main p {
+  font-size: var(--body-sm-size);
+  color: var(--color-text-secondary);
+  max-width: 56ch;
+  margin-bottom: var(--space-md);
+}
+
+.confirmation-banner__main p strong {
+  color: var(--color-text-primary);
+}
+
+.confirmation-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.confirmation-banner__dispatch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.confirmation-banner__dispatch > span:first-child {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+}
+
+.confirmation-banner__dispatch strong {
+  font-family: var(--font-display);
+  font-size: var(--title-lg-size);
+  font-weight: 700;
+}
+
+.confirmation-banner__logistics {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--color-tertiary);
+  font-weight: 600;
+}
+
+.confirmation-banner__logistics svg {
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 767px) {
+  .confirmation-banner__dispatch {
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+}
